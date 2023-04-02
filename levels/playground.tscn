@@ -1,0 +1,156 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvo14hjqh6w3g"]
+
+[ext_resource type="PackedScene" uid="uid://cbcm7raixfe5q" path="res://player/player.tscn" id="1_1200x"]
+[ext_resource type="PackedScene" uid="uid://dpr7hrmvnony6" path="res://sceneItems/playerStart/playerStart.tscn" id="2_8l852"]
+[ext_resource type="PackedScene" uid="uid://bl0ja8vca088d" path="res://sceneItems/platforms/platform.tscn" id="2_t7tq5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cc5j"]
+size = Vector2(1391, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6gpqn"]
+size = Vector2(20, 289)
+
+[node name="Playground" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Sky" type="Polygon2D" parent="Environment"]
+color = Color(0.0627451, 0.0980392, 0.152941, 1)
+polygon = PackedVector2Array(-746, -871, 1830, -864, 1842, 1484, -753, 1515)
+
+[node name="BGMountains" type="Polygon2D" parent="Environment"]
+color = Color(0.254902, 0.254902, 0.254902, 1)
+polygon = PackedVector2Array(-170, 542, -151, 240, -84, 123, 2, 83, 62, 178, 118, 354, 157, 404, 228, 490, 282, 336, 326, 235, 375, 153, 447, 85, 486, 56, 509, 163, 571, 230, 619, 261, 659, 333, 668, 408, 696, 440, 729, 349, 844, 238, 884, 130, 957, 62, 995, 104, 1069, 102, 1074, 137, 1115, 171, 1120, 235, 1162, 289, 1203, 316, 1229, 368, 1229, 549, 1226, 584, -171, 585)
+
+[node name="Mountains" type="Polygon2D" parent="Environment"]
+position = Vector2(-1.52344, 39.4673)
+scale = Vector2(0.990767, 0.872274)
+color = Color(0, 0.372549, 0.180392, 1)
+polygon = PackedVector2Array(-165, 583, -112.515, 469.5, -33, 388, 17.6867, 441.986, 50.9943, 497.014, 123.665, 458.036, 185.234, 329.636, 260.933, 424.789, 275.063, 458.036, 299.287, 476.379, 317.454, 469.5, 347, 443, 439.582, 375.493, 537.486, 422.496, 595.017, 483.257, 664, 500, 736, 449, 779, 375, 883, 309, 949, 326, 1004, 426, 1049.21, 462.621, 1108.76, 359.443, 1183.45, 201.236, 1222.81, 335.368, 1234.93, 462.621, 1243, 542, 1241, 630, 539, 628.854, -165, 630)
+
+[node name="Ground" type="StaticBody2D" parent="Environment"]
+collision_layer = 2
+
+[node name="GroundPoly" type="Polygon2D" parent="Environment/Ground"]
+position = Vector2(6.1494, 403.938)
+scale = Vector2(0.994996, 0.261538)
+color = Color(0.52549, 0.368627, 0, 1)
+polygon = PackedVector2Array(-168.995, 547, 1231.01, 543.176, 1229, 725, 534.525, 734.353, -170, 742)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Ground"]
+position = Vector2(527.5, 576.5)
+shape = SubResource("RectangleShape2D_7cc5j")
+debug_color = Color(0, 0.878431, 0.54902, 0.419608)
+
+[node name="Platforms" type="Node2D" parent="Environment"]
+
+[node name="Platform" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(490, 514)
+
+[node name="Platform2" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(510, 514)
+
+[node name="Platform9" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(490, 514)
+
+[node name="Platform10" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(510, 514)
+
+[node name="Platform11" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(326, 554)
+
+[node name="Platform12" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(346, 554)
+
+[node name="Platform13" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(286, 554)
+
+[node name="Platform14" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(306, 554)
+
+[node name="Platform15" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(287, 533)
+
+[node name="Platform16" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(307, 533)
+
+[node name="Platform21" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(248, 513)
+
+[node name="Platform23" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(117, 511)
+
+[node name="Platform24" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(38, 512)
+
+[node name="Platform25" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(-35, 478)
+
+[node name="Platform26" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(-94, 420)
+
+[node name="Platform27" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(-130, 362)
+
+[node name="Platform22" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(268, 513)
+
+[node name="Platform17" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(246, 554)
+
+[node name="Platform18" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(266, 554)
+
+[node name="Platform19" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(247, 533)
+
+[node name="Platform20" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(267, 533)
+
+[node name="Platform3" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(652, 514)
+
+[node name="Platform4" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(672, 514)
+
+[node name="Platform5" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(758, 450)
+
+[node name="Platform6" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(778, 450)
+
+[node name="Platform7" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(865, 395)
+
+[node name="Platform8" parent="Environment/Platforms" instance=ExtResource("2_t7tq5")]
+position = Vector2(885, 395)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(417, 552)
+limit_left = -140
+limit_right = 1210
+limit_bottom = 590
+limit_smoothed = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="Bounds" type="StaticBody2D" parent="."]
+collision_layer = 2147483648
+collision_mask = 3
+
+[node name="LeftLevelBountCollision" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(-153, 300)
+scale = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_6gpqn")
+debug_color = Color(1, 0.266667, 0.262745, 0.419608)
+
+[node name="RightLevelBountCollision" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(1220, 300)
+scale = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_6gpqn")
+debug_color = Color(1, 0.266667, 0.262745, 0.419608)
+
+[node name="PlayerStart" parent="." node_paths=PackedStringArray("_camera") instance=ExtResource("2_8l852")]
+position = Vector2(404, 556)
+_playerScene = ExtResource("1_1200x")
+_camera = NodePath("../Camera2D")

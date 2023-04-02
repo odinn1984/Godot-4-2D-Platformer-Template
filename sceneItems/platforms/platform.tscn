@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl0ja8vca088d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cbx3"]
+
+[node name="Platform" type="StaticBody2D"]
+collision_layer = 2
+
+[node name="PlatformShape" type="Polygon2D" parent="."]
+color = Color(0.235294, 0.117647, 0, 1)
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="PlatformTopShape" type="Polygon2D" parent="."]
+position = Vector2(0, -6.5)
+scale = Vector2(1, 0.35)
+color = Color(0.0784314, 0.027451, 0, 1)
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 18.5714, 6, 12.8571, 0.0148315, 9.99999, -6, 10, -10, 18.5714)
+
+[node name="PlatformCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4cbx3")

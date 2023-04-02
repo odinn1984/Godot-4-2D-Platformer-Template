@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpr7hrmvnony6"]
+
+[ext_resource type="Script" path="res://sceneItems/playerStart/scripts/playerStart.cs" id="1_fyb23"]
+
+[node name="PlayerStart" type="Node2D"]
+script = ExtResource("1_fyb23")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.952941, 0, 0.517647, 1)
+polygon = PackedVector2Array(8, 0, 0, -8, -8, 0, -8, 0, -8, 0, 0, 8)
